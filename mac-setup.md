@@ -138,7 +138,7 @@ Unfortunately, the AVD dialog is only available in an active project, so to acce
 
 - Go through the wizard dialog and generate a blank Android app. It doesn’t matter what type of project it is and you won’t need to compile it – but the emulator options are only available from the IDE window. You can delete the project once we are finished configuring the emulators.
 
-![](media/image10.png)![](media/as-new-project-wiz.png)
+![](media/as-new-project-wiz.png)
 
 - Once the IDE is showing, click the **AVD button** in the toolbar – it will have a tooltip if you have trouble finding it.
 
@@ -150,11 +150,11 @@ Unfortunately, the AVD dialog is only available in an active project, so to acce
 
 - Next, walk through the wizard to create an emulator image – we recommend you do this twice so you have both a phone and tablet image.
 
-![](media/image14.png) ![](media/as-create-avd.png)
+![](media/as-create-avd.png)
 
 - You can click the **Advanced** button on the emulator settings screen to get to additional settings.
 
-![](media/image16.png) ![](media/as-avd-advanced.png)
+![](media/as-avd-advanced.png)
 
 - Click **Finish** to create the image. Once it’s created, it will be available to Xamarin Studio through the devices dropdown, however any editing or changes to the image definition should always be done through this Android Studio UI rather than the UI included with the Android SDK as they can sometimes overwrite each other and cause issues.
 
