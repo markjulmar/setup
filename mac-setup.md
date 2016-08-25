@@ -39,20 +39,21 @@ We also have a [macOS setup video available](http://xamarin.wistia.com/medias/ra
 
 3. Launch Xcode to accept the licensing agreements and download additional runtime files necessary for development.
 
-4.  Install **Xamarin Studio** using the Xamarin unified installer
-    available from [xamarin.com/download](http://xamarin.com/download). The installer will automatically include any tools and SDKs needed for Android
-    development. This may take a while depending on what is already
-    installed on the computer since it may have to download fairly large
-    SDKs.
+4. Install **Xamarin Studio** using the Xamarin unified installer available from [xamarin.com/download](http://xamarin.com/download). The installer will automatically include any tools and SDKs needed for Android development. This may take a while depending on what is already installed on the computer since it may have to download fairly large SDKs.
 
-5.  Launch **Xamarin Studio** - it will be in your **Applications**
-    folder, or you can use Spotlight to locate and launch the
-    application.
+5. Launch **Xamarin Studio** - it will be in your **Applications** folder, or you can use Spotlight to locate and launch the application.
 
-6.  Verify you are on the *Stable* channel (this is the default) and
-    that you have the latest updates installed. You can check this
-    through the **Xamarin Studio \> Check For Updates** system menu
-    option.
+6. (Optional) If you have a MSDN license, you can activate your copy of Xamarin Studio to enable the additional features included with the commercial license. You will need a [Xamarin account](https://store.xamarin.com/account/register). This is not required - you can participate in all of the classes using the free community version of Xamarin Studio.
+
+### Xamarin update channels
+
+In order to keep up with the rapidly changing mobile landscape, Xamarin updates the development platform quite frequently. There are three update channels available with Xamarin:
+
+* **Alpha** - this is used for very new changes and features and is updated fairly frequently. Changes released here have passed internal unit tests but may have breaking changes and bugs.
+* **Beta** - this channel is used for imminent release updates. The code released here has been more fully tested and new API names and types are considered stable but the implementation might be changed as bugs are located and fixed.
+* **Stable** - this is the production release channel. Unless otherwise noted in the course materials or by the instructor, this is the channel we assume students will be on.  
+
+You can check or change which channel you are on using the **Xamarin Studio \> Check For Updates** system menu option at any time.
 
 ![](media/xs-channel.png)
 
@@ -172,7 +173,7 @@ Start by creating a new Xamarin.Forms project. Open Xamarin Studio and use the N
 
 - Select the **Debug** configuration and one of the **iOS Simulator** choices in the toolbar, for example the **iPhone 6s iOS 9.3** choice:
 
-> ![](media/xs-ios-simulator.png)
+![](media/xs-ios-simulator.png)
 
 - Click the "Run" button in the toolbar (looks like a "Play" icon).
 - It should build the application and then run it in the simulator and display some text.
@@ -184,6 +185,10 @@ Start by creating a new Xamarin.Forms project. Open Xamarin Studio and use the N
 - Select the **Debug** configuration and one of the choices in the emulator drop-down. If you don't see any choices, or you would like to configure the choices available, use the instructions described above.
 
 - Click the "Run" button in the toolbar (looks like a "Play" icon). It should build the application and then run it in the selected emulator.
+
+## Uninstalling Xamarin tools
+
+You can uninstall Xamarin from your Mac using [these instructions](https://developer.xamarin.com/guides/cross-platform/getting_started/installation/uninstalling_xamarin/).
 
 ## Troubleshooting
 
