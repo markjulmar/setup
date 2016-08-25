@@ -58,7 +58,7 @@ In order to keep up with the rapidly changing mobile landscape, Xamarin updates 
 
 You can check or change which channel you are on using **Tools \> Options \> Xamarin \> Other** menu.
 
-> ![](media/vs-channel.png)
+![](media/vs-channel.png)
 
 ## Pairing Windows with a Mac host for iOS development
 
@@ -96,23 +96,23 @@ You will need to do all the below steps on the cloud-based Mac, just like the lo
 
 * Log into the Mac using an account with administrator privileges.
 
-* Install the latest version of X[XCode from the Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12). You will need an Apple account for this.
+* Install the latest version of [XCode from the Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12). You will need an Apple account for this.
 
 * Install the Xamarin tools using the installer from [xamarin.com/download](http://xamarin.com/download). Uncheck everything *except* Xamarin.iOS - this is the only product that must be installed to use the Mac as a build host.
 
-* Once the Mac has Xamarin.iOS installed, open the Mac’s Sharing preferences pane (Apple \> System Preferences \> Sharing) and make sure the Remote Login service is active. This is disabled by default, so you will likely need to turn it on.
+* Once the Mac has Xamarin.iOS installed, open the Mac’s Sharing preferences pane (**Apple \> System Preferences \> Sharing**) and make sure the **Remote Login** service is active. This is disabled by default, so you will likely need to turn it on.
 
 > ![](media/win-machost-remote.png)
 
-* Make sure the account you will be using is listed in the **Allow access** pane, or that the account is part of the administrators group (which is added by default).
+* Make sure the account you will be using is listed in the **Allow access for:** pane, or that the account is part of the administrators group (which is added by default).
 
-* Make sure **ssh** is running by executing `ssh localhost` from a terminal command prompt. This only needs to be done once to validate the remote user setup.
-
-* Make sure you can ping your Mac host and remotely connect to it from your Windows machine through **ssh** as well – you can install a free tool such as [PuTTY](http://www.putty.org/) to perform this test. This will verify that no firewall restrictions are in place.
+* Verify that **ssh** is now running by executing `ssh localhost` from a Terminal command prompt on the Mac host.
 
 ### Setup Visual Studio to use your Mac as a build host
 
-Open Visual Studio on your Windows machine.
+As a first step, make sure you can ping your Mac host and remotely connect to it from your Windows machine through **ssh**. You can install a free tool such as [PuTTY](http://www.putty.org/) to perform this test. This will verify that no firewall restrictions are in place.
+
+* Open Visual Studio on your Windows machine.
 
 * Open **Tools \> Options \> Xamarin \> iOS Settings** and click the **Find Xamarin Mac Agent** button.
 
@@ -133,7 +133,7 @@ a Mac agent.
 
 ![](media/vs-machost4.png)
 
-If any of these steps fail, check the [Mac build host troubleshooting guide](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/troubleshooting/).
+If any of these steps fail, there are some diagnostic logs you can check, both on Windows and on the remote Mac host. Read through the [Mac build host troubleshooting guide](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/troubleshooting/) for more information.
 
 ## Running mobile applications
 
