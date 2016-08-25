@@ -15,7 +15,9 @@ The following machines are supported by Apple for running the latest macOS versi
 
 The number presented here is the model identifier, you can retrieve that on the Mac using:
 
-`Apple Menu > About This Mac > More Info … > System Report … Model Identifier`
+`Apple Menu > About This Mac > System Report … Model Identifier`
+
+![](media/sysinfo-modelid.png)
 
 You can also retrieve the model information from a terminal session:
 
