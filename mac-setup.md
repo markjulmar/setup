@@ -1,6 +1,10 @@
-# Mac OS X Setup Checklist
+# Getting ready for Xamarin University with a Mac
 
-Welcome to Xamarin University! This guide is to help you get your macOS development environment setup and ready to go before working through any of the Xamarin University materials.
+Welcome to Xamarin University! This guide is to help you get your macOS development environment setup and ready to go before working through any of the Xamarin University materials. This will likely take at least an hour to complete so give yourself plenty of time to setup and validate your system.
+
+If you have any trouble, the final half of <a href="https://university.xamarin.com/classes/track/all#xam101-setup">XAM101 - Orientation and Welcome</a> is devoted to 1:1 time with a trainer to solve setup issues. Just enroll in one of the upcoming classes and then you can get specific help from an expert.
+
+In addition, we have a [XAM101 FAQ](https://university.xamarin.com/faq/xam101-setup) which answers some common questions about setup and Xamarin University.
 
 ## Hardware
 Apple generally requires that you run the latest released version of macOS. As of Fall 2016, you should plan to get a Mac that can run El Capitan and is on the supported list for macOS Sierra. The machine should have a 64-bit Intel processor, 10GBs of free disk space, and a minimum of 4G of RAM; the more RAM the better. Avoid computers made prior to 2008 as they will likely not be sufficient to run the tools on.
@@ -35,15 +39,17 @@ We also have a [macOS setup video available](http://xamarin.wistia.com/medias/ra
 
 1.  Verify that your Mac is running the _latest_ released version of macOS. You can get this information from **About This Mac** in the system menu as shown above.
 
-2.  Install the latest version of [XCode from the Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
+2. Make sure you have at least 40-50G of free disk space. The IDE, simulator and emulator images and associated SDKs are all quite large.
 
-3. Launch Xcode to accept the licensing agreements and download additional runtime files necessary for development.
+3.  Install the latest version of [XCode from the Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
 
-4. Install **Xamarin Studio** using the Xamarin unified installer available from [xamarin.com/download](http://xamarin.com/download). The installer will automatically include any tools and SDKs needed for Android development. This may take a while depending on what is already installed on the computer since it may have to download fairly large SDKs.
+4. Launch Xcode to accept the licensing agreements and download additional runtime files necessary for development.
 
-5. Launch **Xamarin Studio** - it will be in your **Applications** folder, or you can use Spotlight to locate and launch the application.
+5. Install **Xamarin Studio** using the Xamarin unified installer available from [xamarin.com/download](http://xamarin.com/download). The installer will automatically include any tools and SDKs needed for Android development. This may take a while depending on what is already installed on the computer since it may have to download fairly large SDKs.
 
-6. (Optional) If you have a MSDN license, you can activate your copy of Xamarin Studio to enable the additional features included with the commercial license. You will need a [Xamarin account](https://store.xamarin.com/account/register). This is not required - you can participate in all of the classes using the free community version of Xamarin Studio.
+6. Launch **Xamarin Studio** - it will be in your **Applications** folder, or you can use Spotlight to locate and launch the application. We recommend keeping it in your Dock for quick access.
+
+7. (Optional) If you have a MSDN license, you can activate your copy of Xamarin Studio to enable the additional features included with the commercial license. You will need a [Xamarin account](https://store.xamarin.com/account/register). This is not required - you can participate in all of the classes using the free community version of Xamarin Studio.
 
 ### Xamarin update channels
 
@@ -115,7 +121,9 @@ the Android SDK emulators which are installed with [Android Studio](https://deve
 
 ![](media/as-welcome.png)
 
-- Make sure you have the SDK Platform installed for the most recent released version of Android. These are the libraries used by the build process to access the Java APIs in your Android applications. At a minimum, you should install the latest released version (not previews) but adding additional versions won't hurt anything (beyond using disk space).
+- Make sure all the **Android SDK Tools** are installed for latest released Android Platform. Generally, you should always build your app with the latest SDK tools.
+
+- Make sure you have the **SDK Platform** installed for the most recent released version of Android. There are multiple versions of the SDK available - these are the libraries used by the build process to access the Java APIs in your Android applications. At a minimum, you should install the latest released version (not previews) but adding additional versions won't hurt anything (beyond using disk space).
 
 ![](media/android-sdks.png)
 

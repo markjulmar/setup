@@ -1,35 +1,28 @@
 # Troubleshooting
 
-## Setup on a Mac
-Generally, iOS development goes very smoothly. The most common issues encountered are: Missing Android SDK versions and
-Android emulator issues.
+## Common Build Problems
 
-If the *Android* application fails to build on either environment, then
-verify you have the proper Android SDK versions installed. You will
-often get an error that reads something like this 
+When you have trouble with a specific class, make sure to check the FAQ link available on the [Classes Page](https://university.xamarin.com/classes).
+
+Also, make sure you are on the *stable* update channel, and that you have applied any released updates or fixes to your development environment, both from Xamarin and Microsoft if you are using Visual Studio.
+
+---
+***My Xamarin.Android application fails to build and says something about missing SDK version***
+
+If the *Android* application fails to build, the first thing you should
+verify is that you have the proper Android SDK versions installed. If not, you will often get an error that reads something like this 
 
 ![](media/xs-droid-target-error.png)
 
-To correct this, install the proper runtime
-versions using the manager (**Tools \> Open Android SDK Manager…**).
+To correct this, install the proper runtime versions using the Android SDK Manager (**Tools \> Open Android SDK Manager…** or **Tools \> Android \> SDK Manager**).
 
-Alternatively, you can open the Android project (right-click on the
-project in the solution pad and choose **Options**) and change the
-**Target Android Version** to an SDK version you have installed.
+Alternatively, you can open the Xamarin.Android project configuration and change the **Target Android Version** to an SDK version you have installed.
 
 ![](media/xs-change-droid-target.png)
 
 Or you can set your Target **Version** to "Automatic" and set your Target **Framework** to "Use Latest".  Target Framework is set in the General Tab.
 
 ![](media/xs-change-droid-framework.png)
-
-If you have trouble connecting or launching the emulator from Xamarin Studio, try launching the Android emulator *before* you run your program and then *keep it running*. If Xamarin Studio fails to detect the emulator, then close the IDE and restart it. It should detect the running emulator on launch and then the emulator will show up in the available choices in the toolbar.
-
-## Common Build Problems
-
-When you have trouble with a specific class, make sure to check the FAQ link available on the [Classes Page](https://university.xamarin.com/classes).
-
-Also, make sure you are on the *stable* update channel, and that you have applied any released updates or fixes to your development environment, both from Xamarin and Microsoft if you are using Visual Studio.
 
 ---
 **Android project fails to build and gives an error indicating a file failed to unzip, a zip file is invalid, or an error similar to "Please install package: 'Android Support Library' available in SDK installer."**
@@ -45,11 +38,6 @@ On Windows, the cache is located at `%USERPROFILE%\AppData\Local\Xamarin`, on ma
 Inside these folders will be each version that has been downloaded. Delete each of these folders (or just the ones reporting errors) and the **zips** folder which contains the originally downloaded file. **DO NOT DELETE THE Mono for Android folder**.
 
 Then rebuild your project - this should kick off an MSBuild task to re-download the zip and extract the library for the Android version your app is targeting.
-
----
-***Android application builds but fails to deploy to the device/emulator, or I get a DWP Handshake failed from the Visual Studio Android Emulator***
-
-Try turning off "Use Fast Deployment" in the project settings for the Xamarin.Android application. This is on the **Android Options** tab of the project settings. 
 
 ---
 ***Cannot set a project as active in a lab solution***
@@ -101,3 +89,63 @@ Once you are editing the project XML, find the `AndroidUseLatestPlatformSdk` pro
 
 Save the changes to your project file. Xamarin Studio will automatically load the changes. In Visual Studio, right-click the unloaded project and choose "Reload Project".
 
+## Common runtime issues
+
+---
+***Android application builds but fails to deploy to the device/emulator, or I get a DWP Handshake failed from the Visual Studio Android Emulator***
+
+Try turning off "Use Fast Deployment" in the project settings for the Xamarin.Android application. This is on the **Android Options** tab of the project settings. 
+
+---
+***The debugger is not connecting to the Android emulator***
+
+If you have trouble connecting or launching the emulator from the IDE, try launching the Android emulator *before* you run your program and then *keep it running*. If the IDE fails to detect the emulator, then close it and restart it. It should detect the running emulator on launch and then the emulator will show up in the available choices in the toolbar.
+
+> **Note** that the Android emulator must be running on the *same
+machine*. So, if you are running Visual Studio in a Windows VM, you will
+need to launch an emulator in that VM to see it. There is a technique
+you can use to connect to a networked instance of an emulator using the
+**adb** command-line tool in the SDK – ask the instructor to walk you
+through the steps if you are interested in this approach.
+
+Sometimes, the problem is that you have multiple copies of the Android SDK installed and the emulator is using one version and the IDE is using another. They must be using the same version of **adb** to connect. Verify that you only have one copy of the SDK and that the emulator and IDE are both pointing to the same path. You can configure the IDE path in the Android settings under **Xamarin Studio \> Preferences \> Projects \> SDK Locations \> Android** or **Tools \> Options \> Xamarin \> Android Settings**. 
+
+---
+***The IDE is not detecting my Android device even though it's plugged in***
+If you're unable to detect a physical Android device connected
+to your Windows machine, you may need to install a USB driver; check the manufacture's website for a compatible driver or use the generic Google supplied USB driver.
+
+---
+***Android Emulator for Visual Studio fails to launch**
+
+If the Visual Studio Android emulator fails to launch, this may be because you have a newer (Skylake) processor set. This includes the Surface Book i7, Surface Pro 4, and other newer computers. In these cases, the newer Skylake
+processors have an issue with the current build of the VS Android
+Emulator. They will install and appear to run, but VS will be unable to
+connect to the emulator. The app will launch and then exit.
+
+The issue is related to Hyper-V on Windows 10 when running on the latest
+Intel (Skylake) processors. The images were built for the earlier
+iteration of the CPU hardware and Hyper-V has trouble executing it on
+the newer architecture. Fortunately, the fix is quite easy:
+
+- Open the Hyper-V manager using the Start menu:
+
+![](media/ts-hyperv-manager.png)
+
+- In the Hyper-V manager, right click on the Android VM you are using.
+- Click **Settings**
+- Expand "Processor", select "Compatibility"
+- Enable "Migrate to a physical computer with a different processor version" as shown here:
+
+![](media/ts-migrate-cpu-hyperv.png)
+
+---
+***The Visual Studio Android Emulator stops with the diagnostic message: libaot-mscorlib.dll.so not found***
+
+To resolve this error, use the following steps to disable fast
+deployment:
+
+- Open the project properties for the Android project.
+- Click Android Options and unselect **Use Fast Deployment** (debug mode only):
+
+> ![](media/vs-fast-deployment.png)
