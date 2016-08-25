@@ -92,21 +92,14 @@ As mentioned above, it's recommended that you use a physical Android device for 
 
 > Note that on some devices, the steps might vary slightly - if they don't match the instructions below, try searching for your specific vendor and turning on device debugging.
 
-1.  On the device, open **Settings\> About\> Software Information\>
-    More**.
-
-2.  Tap **Build number** seven times to enable Developer options. On the
-    seventh tap, it will display “You are now a developer!”
+- On the device, open **Settings\> About\> Software Information\> More**.
+- Tap **Build number** seven times to enable Developer options. On the seventh tap, it will display “You are now a developer!”
 
 ![](media/android-developer.png.png)
 
-3.  Go back to the **Settings** menu and now you'll be able to see a “Developer
-    options” menu item.
+- Go back to the **Settings** menu and now you'll be able to see a “Developer options” menu item.
 
-4.  Tap it and turn on USB Debugging from the menu on the next screen.
-    When you connect it to the computer, it will prompt you to allow USB
-    debugging – make sure to check the **Always allow from this
-    computer** to avoid the prompt in the future.
+- Tap it and turn on USB Debugging from the menu on the next screen. When you connect it to the computer, it will prompt you to allow USB debugging – make sure to check the **Always allow from this computer** to avoid the prompt in the future.
 
 ![](media/android-developer-options.png)
 
@@ -115,26 +108,19 @@ As mentioned above, it's recommended that you use a physical Android device for 
 You can also use an emulator to test Android applications. We recommend
 the Android SDK emulators which are installed with [Android Studio](https://developer.android.com/studio/index.html). These are hardware accelerated, kept up to date by Google and you can download images which have Google Play services pre-installed.
 
-1.  Download and run the [Android Studio installer](https://developer.android.com/studio/index.html). It will install all the required Android development pieces as well as the emulators.
+- Download and run the [Android Studio installer](https://developer.android.com/studio/index.html). It will install all the required Android development pieces as well as the emulators.
 
-2.  Once installed, run the application and click the **Configure**
-    button at the bottom of the Welcome Screen. Select **SDK Manager**
-    from the drop down.
+- Once installed, run the application and click the **Configure** button at the bottom of the Welcome Screen. Select **SDK Manager** from the drop down.
 
 ![](media/as-welcome.png)
 
-3.  Make sure you have the SDK Platform installed for several recent
-    versions of Android. These are the libraries used by the build
-    process to access the Java APIs in your Android applications. We
-    recommend you install 4.0 through 6.0, but adding more won’t hurt
-    anything (beyond using disk space).
+- Make sure you have the SDK Platform installed for the most recent released version of Android. These are the libraries used by the build process to access the Java APIs in your Android applications. At a minimum, you should install the latest released version (not previews) but adding additional versions won't hurt anything (beyond using disk space).
 
 ![](media/android-sdks.png)
 
-4.  Switch to the SDK Tools tab and make sure that all of the extra SDK
-    elements are installed. We won’t actually need most of this for the
-    training, but as you get into Xamarin.Android development, much of
-    this becomes a requirement.
+> Note that you do _not_ need to install an SDK version to make your app compatible with that version - Android supplies backward-compatible libraries to ensure it runs on older versions as long as you are compiling against the latest.
+
+- Switch to the SDK Tools tab and make sure that all of the extra SDK elements are installed. You won’t need most of this for the classes you take, but as you get further into Xamarin.Android development, more of this becomes a requirement.
 
 ![](media/android-sdk-tools.png)
 
@@ -144,51 +130,33 @@ It's recommended to have at least one modern (V5, 6 or 7) Android Virtual Device
 
 Unfortunately, the AVD dialog is only available in an active project, so to access the wizard, you will need to generate a new project with Android Studio.
 
-1.  Click **OK** to dismiss the SDK dialog if it’s still open and return
-    to the Welcome Screen. If you rebooted your computer, then re-open
-    Android Studio.
+- Click **OK** to dismiss the SDK dialog if it’s still open and return to the Welcome Screen. If you rebooted your computer, then re-open Android Studio.
 
-2.  Create a new Android project by clicking the **Start a New Android
-    Project** link on the Welcome Screen.
+- Create a new Android project by clicking the **Start a New Android Project** link on the Welcome Screen.
 
 ![](media/as-new-project.png)
 
-3.  Go through the wizard dialog and generate a blank Android app. It
-    doesn’t matter what type of project it is and you won’t need to
-    compile it – but the emulator options are only available from the
-    IDE window. You can delete the project once we are finished
-    configuring the emulators.
+- Go through the wizard dialog and generate a blank Android app. It doesn’t matter what type of project it is and you won’t need to compile it – but the emulator options are only available from the IDE window. You can delete the project once we are finished configuring the emulators.
 
 ![](media/image10.png)![](media/as-new-project-wiz.png)
 
-4.  Once the IDE is showing, click the **AVD button** in the toolbar –
-    it will have a tooltip if you have trouble finding it.
+- Once the IDE is showing, click the **AVD button** in the toolbar – it will have a tooltip if you have trouble finding it.
 
 ![](media/as-avd-button.png)
 
-5.  This will display the Android Virtual Device Manager where you can
-    add, remove and edit your emulators. Click the **Create Virtual
-    Device...** button at the bottom to create a new emulator.
+- This will display the Android Virtual Device Manager where you can add, remove and edit your emulators. Click the **Create Virtual Device...** button at the bottom to create a new emulator.
 
 ![](media/as-avd-dialog.png)
 
-6.  Next, walk through the wizard to create an emulator image – we
-    recommend you do this twice so you have both a phone and tablet
-    image.
+- Next, walk through the wizard to create an emulator image – we recommend you do this twice so you have both a phone and tablet image.
 
 ![](media/image14.png) ![](media/as-create-avd.png)
 
-7.  You can click the **Advanced** button on the emulator settings
-    screen to get to additional settings.
+- You can click the **Advanced** button on the emulator settings screen to get to additional settings.
 
 ![](media/image16.png) ![](media/as-avd-advanced.png)
 
-8.  Click **Finish** to create the image. Once it’s created, it will be
-    available to Xamarin Studio through the devices dropdown, however
-    any editing or changes to the image definition should always be done
-    through this Android Studio UI rather than the UI included with the
-    Android SDK as they can sometimes overwrite each other and cause
-    issues.
+- Click **Finish** to create the image. Once it’s created, it will be available to Xamarin Studio through the devices dropdown, however any editing or changes to the image definition should always be done through this Android Studio UI rather than the UI included with the Android SDK as they can sometimes overwrite each other and cause issues.
 
 ## Verify your installation
 
@@ -200,36 +168,22 @@ Start by creating a new Xamarin.Forms project. Open Xamarin Studio and use the N
 
 ### Testing iOS on OS X with Xamarin Studio
 
-1.  Make sure the iOS platform project is the current startup project in
-    the IDE – it should be in **bold** in the solution pad. You can
-    right-click and choose *Set As Startup Project* to change it if
-    necessary.
+- Make sure the iOS platform project is the current startup project in the IDE – it should be in **bold** in the solution pad. You can right-click and choose *Set As Startup Project* to change it if necessary.
 
-2.  Select the **Debug** configuration and one of the **iOS Simulator**
-    choices in the toolbar, for example the **iPhone 6s iOS 9.3**
-    choice:
+- Select the **Debug** configuration and one of the **iOS Simulator** choices in the toolbar, for example the **iPhone 6s iOS 9.3** choice:
 
 > ![](media/xs-ios-simulator.png)
 
-1.  Click the "Run" button in the toolbar (looks like a "Play" icon).
-
-2.  It should build the application and then run it in the simulator and
-    display some text.
+- Click the "Run" button in the toolbar (looks like a "Play" icon).
+- It should build the application and then run it in the simulator and display some text.
 
 ### Testing Xamarin.Android on OS X with Xamarin Studio
 
-1.  Make sure the **Android** platform project is the active project in
-    Xamarin Studio (you can right-click and choose *Set As Startup
-    Project* to change it if necessary).
+- Make sure the **Android** platform project is the active project in Xamarin Studio (you can right-click and choose *Set As Startup Project* to change it if necessary).
 
-2.  Select the **Debug** configuration and one of the choices in the
-    emulator drop-down. If you don't see any choices, or you would like
-    to configure the choices available, use the instructions described
-    above.
+- Select the **Debug** configuration and one of the choices in the emulator drop-down. If you don't see any choices, or you would like to configure the choices available, use the instructions described above.
 
-3.  Click the "Run" button in the toolbar (looks like a "Play" icon). It
-    should build the application and then run it in the selected
-    emulator.
+- Click the "Run" button in the toolbar (looks like a "Play" icon). It should build the application and then run it in the selected emulator.
 
 ## Troubleshooting
 
