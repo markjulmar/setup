@@ -6,15 +6,22 @@ Android emulator issues.
 
 If the *Android* application fails to build on either environment, then
 verify you have the proper Android SDK versions installed. You will
-often get an error that reads something like **"The required Android SDK
-x.xx is missing…"**. To correct this, install the proper runtime
+often get an error that reads something like this 
+
+![](media/xs-droid-target-error.png)
+
+To correct this, install the proper runtime
 versions using the manager (**Tools \> Open Android SDK Manager…**).
 
 Alternatively, you can open the Android project (right-click on the
 project in the solution pad and choose **Options**) and change the
-**Minimum Android Version** to an SDK version you have installed.
+**Target Android Version** to an SDK version you have installed.
 
 ![](media/xs-change-droid-target.png)
+
+Or you can set your Target **Version** to "Automatic" and set your Target **Framework** to "Use Latest".  Target Framework is set in the General Tab.
+
+![](media/xs-change-droid-framework.png)
 
 If you have trouble connecting or launching the emulator from Xamarin Studio, try launching the Android emulator *before* you run your program and then *keep it running*. If Xamarin Studio fails to detect the emulator, then close the IDE and restart it. It should detect the running emulator on launch and then the emulator will show up in the available choices in the toolbar.
 
