@@ -1,5 +1,7 @@
 # Mac OS X Setup Checklist
 
+Welcome to Xamarin University! This guide is to help you get your macOS development environment setup and ready to go before working through any of the Xamarin University materials.
+
 ## Hardware
 Apple generally requires that you run the latest released version of macOS. As of Fall 2016, you should plan to get a Mac that can run El Capitan and is on the supported list for macOS Sierra. The machine should have a 64-bit Intel processor, 10GBs of free disk space, and a minimum of 4G of RAM; the more RAM the better. Avoid computers made prior to 2008 as they will likely not be sufficient to run the tools on.
 
@@ -23,7 +25,13 @@ You can also retrieve the model information from a terminal session:
 
 `system_profiler SPHardwareDataType`
 
-## Software
+## Step-by-step instructions
+
+The Xamarin documentation portal has [detailed setup and install instructions](http://developer.xamarin.com/guides/cross-platform/getting_started/installation/) for Xamarin.
+
+We also have a [macOS setup video available](http://xamarin.wistia.com/medias/rab4beeawx) which walks you through the steps to installing Xamarin on your development machine.
+
+**Here's the basics:**
 
 1.  Verify that your Mac is running the _latest_ released version of macOS. You can get this information from **About This Mac** in the system menu as shown above.
 
