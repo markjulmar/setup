@@ -96,7 +96,7 @@ As mentioned above, it's recommended that you use a physical Android device for 
 - On the device, open **Settings\> About\> Software Information\> More**.
 - Tap **Build number** seven times to enable Developer options. On the seventh tap, it will display “You are now a developer!”
 
-![](media/android-developer.png.png)
+![](media/android-developer.png)
 
 - Go back to the **Settings** menu and now you'll be able to see a “Developer options” menu item.
 
