@@ -116,7 +116,7 @@ If you're unable to detect a physical Android device connected
 to your Windows machine, you may need to install a USB driver; check the manufacture's website for a compatible driver or use the generic Google supplied USB driver.
 
 ---
-***Android Emulator for Visual Studio fails to launch**
+***Android Emulator for Visual Studio fails to launch***
 
 If the Visual Studio Android emulator fails to launch, this may be because you have a newer (Skylake) processor set. This includes the Surface Book i7, Surface Pro 4, and other newer computers. In these cases, the newer Skylake
 processors have an issue with the current build of the VS Android
