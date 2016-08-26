@@ -148,4 +148,14 @@ deployment:
 - Open the project properties for the Android project.
 - Click Android Options and unselect **Use Fast Deployment** (debug mode only):
 
-> ![](media/vs-fast-deployment.png)
+![](media/vs-fast-deployment.png)
+
+## Additional Links
+
+Here are some additional places to look for help if the above doesn't answer your question:
+
+* [Troubleshooting the Visual Studio Emulator for Android](https://msdn.microsoft.com/en-us/library/mt228282.aspx)
+
+* [Debugging Xamarin.Android build and deployment failures](https://xamarinhelp.com/debugging-xamarin-android-build-and-deployment-failures/)
+
+* [Common errors and workarounds for Android emulators](https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/visual-studio-android-emulator/#Troubleshooting)
